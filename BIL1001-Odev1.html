@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h2>2019 G�z D�neminin ilk �devi</h2>
-<label for="id1">Metin kutusu 1</label>
-<input type='text' id='id1' /> 
-<br>
-<label for="id2">Metin kutusu 2</label>
-<input type='text' id='id2' /> 
-<br><br>
-<button type="button">Topla</button>
-<br><br>
-<label for="id3">Metin kutusu 3</label>
-<input type='text' id='id3' /> 
-<br>
-<label for="id4">Metin kutusu 4</label>
-<input type='text' id='id4' /> 
-<br><br>
-<button type="button">Yap��t�r</button>
-</body>
+	<head>
+		<title>Omer Faruk CENİKLİ 2019280020</title>
+	</head>
+	<body>
+		<h1>Omer Faruk CENİKLİ 2019280020</h1>
+		<h2>2019 Güz Döneminin ilk ödevi</h2>
+		<Label for="id1">Metin kutusu 1</label>
+		<input type="text" id='id1' onkeypress="return sadecesayi(event)" />
+		<br>
+		<Label for="id2">Metin kutusu 2</label>
+		<input type="text" id='id2' onkeypress="return sadecesayi(event)" />
+		<br><br>
+		<button type="button" onclick="toplam()">Topla</button>
+		<br><br>
+		<Label for="id3">Metin kutusu 3</label>
+		<input type="text" id='id3' />
+		<br>
+		<Label for="id4">Metin kutusu 4</label>
+		<input type="text" id='id4' />
+		<br><br>
+		<button type="button" onclick="alert(id3.value + id4.value)";>Yapıştır</button>
+		<script>
+		var sayı1 = document.getElementById("id1");
+		var sayı2 = document.getElementById("id2");
+
+		function toplam() {
+		var sonuc = Number(sayı1.value) + Number(sayı2.value);
+		alert(sonuc);
+        }
+		
+		function sadecesayi(e) {
+		var k;
+		document.all ? k = e.keyCode : k = e.which;
+		return ((k > 47 && k < 58) || k == 8 || k==13 || k==9);
+		}
+	
+		//Referance
+		//w3schools.com
+		//yazılımbilimi youtube
+		
+		</script>
+	</body> 
 </html>
